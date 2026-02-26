@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Two Calculators</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    padding:20px;
+}
+
+/* Common box */
+.box{
+    background:white;
+    padding:20px;
+    margin:20px auto;
+    width:300px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+}
+
+/* Inputs */
+input{
+    width:100%;
+    height:40px;
+    margin:8px 0;
+    font-size:18px;
+    padding:5px;
+}
+
+/* Buttons */
+button{
+    width:60px;
+    height:45px;
+    font-size:18px;
+    margin:4px;
+    border:none;
+    border-radius:8px;
+    background:#4CAF50;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2e8b57;
+}
+
+/* Normal calculator grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+TWO NUMBER CALCULATOR
+========================= -->
+<div class="box">
+<h2>Two Number Calculator</h2>
+
+<input type="number" id="num1" placeholder="Enter First Number">
+<input type="number" id="num2" placeholder="Enter Second Number">
+
+<div>
+<button onclick="calculate('+')">+</button>
+<button onclick="calculate('-')">-</button>
+<button onclick="calculate('*')">×</button>
+<button onclick="calculate('/')">÷</button>
+</div>
+
+<h3>Result: <span id="result">0</span></h3>
+</div>
+
+
+
+<!-- =========================
+NORMAL CALCULATOR
+========================= -->
+<div class="box">
+<h2>Normal Calculator</h2>
+
+<input type="text" id="display" readonly>
+
+<div class="grid">
+
+<button onclick="clearDisplay()">C</button>
+<button onclick="deleteLast()">DEL</button>
+<button onclick="press('%')">%</button>
+<button onclick="press('/')">÷</button>
+
+<button onclick="press('7')">7</button>
+<button onclick="press('8')">8</button>
+<button onclick="press('9')">9</button>
+<button onclick="press('*')">×</button>
+
+<button onclick="press('4')">4</button>
+<button onclick="press('5')">5</button>
+<button onclick="press('6')">6</button>
+<button onclick="press('-')">-</button>
+
+<button onclick="press('1')">1</button>
+<button onclick="press('2')">2</button>
+<button onclick="press('3')">3</button>
+<button onclick="press('+')">+</button>
+
+<button onclick="press('0')">0</button>
+<button onclick="press('.')">.</button>
+<button onclick="calculateNormal()">=</button>
+
+</div>
+</div>
+
+
+<script>
+
+/* -------------------
+Two Number Calculator
+------------------- */
+function calculate(operator){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let result = 0;
+
+    if(isNaN(num1) || isNaN(num2)){
+        alert("Enter both numbers");
+        return;
+    }
+
+    if(operator==='+') result=num1+num2;
+    if(operator==='-') result=num1-num2;
+    if(operator==='*') result=num1*num2;
+    if(operator==='/') result=num1/num2;
+
+    document.getElementById("result").innerText=result;
+}
+
+
+/* -------------------
+Normal Calculator
+------------------- */
+
+function press(val){
+    document.getElementById("display").value += val;
+}
+
+function clearDisplay(){
+    document.getElementById("display").value="";
+}
+
+function deleteLast(){
+    let current=document.getElementById("display").value;
+    document.getElementById("display").value=current.slice(0,-1);
+}
+
+function calculateNormal(){
+    try{
+        let result=eval(document.getElementById("display").value);
+        document.getElementById("display").value=result;
+    }
+    catch{
+        alert("Invalid Expression");
+    }
+}
+
+</script>
+
+</body>
+</html>
