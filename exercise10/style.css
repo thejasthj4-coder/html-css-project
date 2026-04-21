@@ -1,0 +1,8 @@
+body { margin:0; font-family:Segoe UI, sans-serif; background:#f7f7fb; display:flex; align-items:center; justify-content:center; height:100vh; }
+.container { background:#fff; padding:20px; width:700px; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,0.12); }
+.calc { display:flex; gap:8px; align-items:center; }
+.calc input, .calc select { padding:8px; border-radius:6px; border:1px solid #ddd; }
+.calc button { padding:8px 12px; border-radius:6px; background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; border:none; cursor:pointer; }
+#resultArea { margin-top:12px; font-weight:bold; }
+#history { margin-top:8px; }
+#history li { margin-bottom:4px; }

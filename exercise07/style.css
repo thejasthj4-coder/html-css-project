@@ -1,0 +1,37 @@
+/* Reused base styles from exercise06 */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    width: 820px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h2 { margin-bottom: 20px; font-size: 24px; color: #333; }
+
+form { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+form input { padding: 10px 12px; width: 200px; border-radius: 8px; border: 2px solid #ddd; }
+form button { background: linear-gradient(135deg, #43e97b, #38f9d7); color: white; padding: 10px 14px; border-radius:8px; }
+
+#printArea { margin-top: 18px; text-align: left; }
+
+table { margin: 18px auto; width: 100%; border-collapse: collapse; border-radius: 10px; overflow: hidden; }
+th { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px; }
+td { padding: 10px; background: #f9f9f9; }
+
+.buttons { margin-top: 12px; display:flex; justify-content:center; gap:12px; }
+.buttons button { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 10px 12px; border-radius: 8px; }
+
+tr:nth-child(even) td { background: #ececec; }
+tr:hover td { background: #dfe6ff; }

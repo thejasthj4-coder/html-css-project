@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercise07 - Form to Div & Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Exercise 07: Form → Print Div & Stored Table</h2>
+
+    <form id="entryForm">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="number" id="age" placeholder="Enter Age" required>
+        <button type="submit">Add Entry</button>
+    </form>
+
+    <div id="printArea" style="margin-top:20px; text-align:left;"></div>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div class="buttons">
+        <button onclick="copyData()">Copy Data</button>
+        <button onclick="downloadCSV()">Download CSV</button>
+        <button onclick="clearAll()">Clear All</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body { margin:0; font-family:Segoe UI, sans-serif; background:#f0f4ff; display:flex; align-items:center; justify-content:center; height:100vh; }
+.container { background:#fff; padding:24px; width:800px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.12); }
+form { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+form input { padding:8px 10px; border-radius:6px; border:1px solid #ddd; width:200px; }
+form button { padding:10px 14px; border-radius:8px; border:none; background:linear-gradient(135deg,#43e97b,#38f9d7); color:#fff; cursor:pointer; }
+#entriesTable { width:100%; border-collapse:collapse; margin-top:12px; }
+#entriesTable th { background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; padding:10px; }
+#entriesTable td { padding:8px; border-bottom:1px solid #eee; }
+.message { margin:10px 0; padding:8px; background:#e6ffed; border-radius:6px; }
